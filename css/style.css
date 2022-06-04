@@ -6,13 +6,14 @@
   /*parrafos*/
   --color-tema-1: #ffffff;
   /*mini titulos, numeros, botones y hover*/
-  --color-tema-2: #06d4f0;
-  --color-tema-3: #615249;
-  --color-tema-4: #dcdee4;
-  --color-tema-5: #1d1e22;
+  --color-tema-2: #ffcc33;
+  --color-tema-3: #ff6200;
+  --color-tema-4: #c9c7c7;
+  /*fondo de pagina*/
+  --color-tema-5: #000000;
   --color-tema-6: rgb(255, 255, 255);
   /*efecto hover recolor*/
-  --color-tema-7: #06d5f010;
+  --color-tema-7: #ffcc3315;
 
   --tamaño-fuente-0: 12px;
   --tamaño-fuente-1: 14px;
@@ -33,6 +34,21 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-tema-2);
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-color: var(--color-tema-2) var(--color-tema-5);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -82,6 +98,10 @@ header {
   letter-spacing: 5px;
   font-size: var(--tamaño-fuente-4);
   transition: 0.4s;
+}
+.fa-code{
+  color: var(--color-tema-2);
+  font-size: 30px;
 }
 
 .nav-content {
@@ -697,20 +717,23 @@ p a:hover:after {
 
 .content-text-dos .active ul li {
   color: var(--color-tema-1);
+  margin-bottom: 10px;
 }
 
 .content-text-dos .active ul li::before {
   content: "▹";
   color: var(--color-tema-2);
+  margin-right: 5px
 }
 
 .content-text-dos-h2 {
-  color: var(--color-tema-3);
+  color: var(--color-tema-2);
 }
 
 .content-text-dos-p {
   color: var(--color-tema-1);
   line-height: 2;
+  margin-bottom: 10px;
 }
 
 @keyframes fadeIn {
@@ -1024,7 +1047,8 @@ footer {
   .animacion-tab {
     padding-bottom: 5px;
   }
-  .content-cuaternario{
+
+  .content-cuaternario {
     width: 55vw;
   }
 }
@@ -1051,6 +1075,7 @@ footer {
   .content-enlace-1 h2::after {
     width: 36%;
   }
+
   .content-enlace-2 h2::after {
     width: 28%;
   }
